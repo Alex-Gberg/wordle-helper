@@ -128,7 +128,6 @@ def manualWordleHelper():
             return 1
 
         pattern = makeRePattern(possibleLetters, mustInclude, totalNumFound)
-        print(pattern)
         possibilities = findPossibilities(pattern)
 
         print(f"Number of possibilities: {len(possibilities)}")
