@@ -48,7 +48,7 @@ This project is complete but I may use parts of it in future wordle projects, pe
 - Prettier interface:
     - The terminal interface can become hard to read, especially with huge lists of words being displayed.
 - Optimization:
-    - The ditionary cross reference is quite slow. A simple solution would be to reduce or curate the `words_alpha.txt` to only include dictionary words.
+    - The dictionary cross reference is quite slow. A simple solution would be to reduce or curate the `words_alpha.txt` to only include dictionary words.
 
 ## Acknowledgements
 - The list of English words `words_alpha.txt` comes from [here](https://github.com/dwyl/english-words)
