@@ -1,5 +1,0 @@
-# Required dependencies
-# Install with "python3 -m pip install -r requirements.txt"
-
-tqdm
-pyenchant

@@ -1,6 +1,4 @@
 import re
-from tqdm import tqdm
-import enchant
 
 def displayList(list):
     for i, x in enumerate(list):
@@ -95,25 +93,12 @@ def makeRangeExcluding(c):
 
 def findPossibilities(pattern):
     possibilities = []
-    with open("words_alpha.txt") as wordList:
+    with open("filtered_words.txt") as wordList:
         for word in wordList:
             if re.match(pattern, word):
                 possibilities.append(word.strip())
 
     return possibilities
-
-def filterWithDictionary(possibilities):
-    realPossibilities = []
-    numEliminated = 0
-    pbar = tqdm(possibilities)
-    for p in pbar:
-        pbar.set_description(f"Words eliminated: {numEliminated}")
-        if enchant.Dict("en_US").check(p):
-            realPossibilities.append(p)
-        else:
-            numEliminated += 1
-
-    return realPossibilities
 
 def manualWordleHelper():
     possibleLetters = ["abcdefghijklmnopqrstuvwxyz" for x in range(5)]
@@ -133,12 +118,6 @@ def manualWordleHelper():
         print(f"Number of possibilities: {len(possibilities)}")
         if input("Show possibilites? (y/n): ") == "y":
             displayList(possibilities)
-
-        if input(f"Narrow down with dictionary? WARNING ~60 searches/sec! (y/n): ") == "y":
-            realPossibilities = filterWithDictionary(possibilities)
-            print(f"Number of possibilities in the dictionary: {len(realPossibilities)}")
-            if input("Show possibilites? (y/n): ") == "y":
-                displayList(realPossibilities)
 
     print("GAME OVER!")
     return -1

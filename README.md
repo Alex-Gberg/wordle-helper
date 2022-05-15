@@ -26,9 +26,7 @@
 - Filter this list down to only the words that appear in the dictionary
 
 ## Setup
-- Dependencies can be found in `requirements.txt`
-- To install the dependencies, open the directory in a terminal and enter the command `python3 -m pip install -r requirements.txt`
-- Then use `python3 wordleHelper.py` to run the program
+- Use `python3 wordleHelper.py` to run the program
 
 ## Usage
 - Follow the prompts and fill in the information requested in the terminal
@@ -47,8 +45,6 @@ This project is complete but I may use parts of it in future wordle projects, pe
     - At the moment the manual input can be slow and annoying. It would be great if this information was retrieved from the game's html.
 - Prettier interface:
     - The terminal interface can become hard to read, especially with huge lists of words being displayed.
-- Optimization:
-    - The dictionary cross reference is quite slow. A simple solution would be to reduce or curate the `words_alpha.txt` to only include dictionary words.
 
 ## Acknowledgements
-- The list of English words `words_alpha.txt` comes from [here](https://github.com/dwyl/english-words)
+- The list of English words `filtered_words.txt` comes from [here](https://github.com/dwyl/english-words) and was filtered using the [pyenchant](https://pypi.org/project/pyenchant/)
