@@ -47,4 +47,4 @@ This project is complete but I may use parts of it in future wordle projects, pe
     - The terminal interface can become hard to read, especially with huge lists of words being displayed.
 
 ## Acknowledgements
-- The list of English words `filtered_words.txt` comes from [here](https://github.com/dwyl/english-words) and was filtered using the [pyenchant](https://pypi.org/project/pyenchant/)
+- The list of English words `filtered_words.txt` comes from [here](https://github.com/dwyl/english-words) and was filtered using [pyenchant](https://pypi.org/project/pyenchant/)
